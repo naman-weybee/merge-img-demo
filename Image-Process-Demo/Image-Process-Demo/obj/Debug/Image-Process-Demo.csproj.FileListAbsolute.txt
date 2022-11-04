@@ -1,0 +1,7 @@
+D:\.NET\ImageProcess\Image-Process-Demo\Image-Process-Demo\bin\Debug\Image-Process-Demo.exe.config
+D:\.NET\ImageProcess\Image-Process-Demo\Image-Process-Demo\bin\Debug\Image-Process-Demo.exe
+D:\.NET\ImageProcess\Image-Process-Demo\Image-Process-Demo\bin\Debug\Image-Process-Demo.pdb
+D:\.NET\ImageProcess\Image-Process-Demo\Image-Process-Demo\obj\Debug\Image-Process-Demo.csproj.AssemblyReference.cache
+D:\.NET\ImageProcess\Image-Process-Demo\Image-Process-Demo\obj\Debug\Image-Process-Demo.csproj.CoreCompileInputs.cache
+D:\.NET\ImageProcess\Image-Process-Demo\Image-Process-Demo\obj\Debug\Image-Process-Demo.exe
+D:\.NET\ImageProcess\Image-Process-Demo\Image-Process-Demo\obj\Debug\Image-Process-Demo.pdb
