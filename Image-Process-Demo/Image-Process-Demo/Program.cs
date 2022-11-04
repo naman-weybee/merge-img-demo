@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -14,26 +14,26 @@ namespace Image_Process_Demo
         static void Main(string[] args)
         {
             Program program = new Program();
-            Image img1 = Image.FromFile(basePath + "bgImage.jpg");
-            Image img2 = Image.FromFile(basePath + "squareLogo.jpg");
-            Image img3 = Image.FromFile(basePath + "rectangleLogo.jpg");
-            Image img4 = Image.FromFile(basePath + "packageLogo.jpg");
-            program.MergeImages(img1, img2, img3, img4);
+            Image bgImage = Image.FromFile(basePath + "bgImage.jpg");
+            Image squareLogo = Image.FromFile(basePath + "squareLogo.jpg");
+            Image rectangleLogo = Image.FromFile(basePath + "rectangleLogo.jpg");
+            Image packageLogo = Image.FromFile(basePath + "packageLogo.jpg");
+            program.MergeImages(bgImage, squareLogo, rectangleLogo, packageLogo);
         }
 
-        public Bitmap MergeImages(Image image1, Image image2, Image image3, Image image4)
+        public Bitmap MergeImages(Image bgImage, Image squareLogo, Image rectangleLogo, Image packageLogo)
         {
-            Bitmap bitmap = new Bitmap(image1.Width, image1.Height);
+            Bitmap bitmap = new Bitmap(bgImage.Width, bgImage.Height);
 
             using (Graphics g = Graphics.FromImage(bitmap))
             {
-                g.DrawImage(image1, 0, 0);
-                g.DrawImage(image2, 10, 10);
-                g.DrawImage(image3, image1.Width - image3.Width - 10, 0);
-                g.DrawImage(image4, image1.Width / 2, image1.Height / 2);
+                g.DrawImage(bgImage, 0, 0);
+                g.DrawImage(squareLogo, 10, 10, 100, 100);
+                g.DrawImage(rectangleLogo, bgImage.Width - 150, 10, 150, 150);
+                g.DrawImage(packageLogo, bgImage.Width / 2, bgImage.Height / 2, 125, 125);
             }
             Image img = bitmap;
-            img.Save(mergePath + Guid.NewGuid().ToString() + "_" + "x.jpg");
+            img.Save(mergePath + Guid.NewGuid().ToString() + "_" + "final.jpg");
             Console.WriteLine("Merged");
             return bitmap;
         }
